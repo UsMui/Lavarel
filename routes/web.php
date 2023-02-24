@@ -36,5 +36,9 @@ Route::get("/remove-cart/{product}",[\App\Http\Controllers\WebController::class,
 Route::post("user/product/checkout",[\App\Http\Controllers\WebController::class,"placeOrder"]);
 Route::get("/sendNotification",[\App\Http\Controllers\WebController::class,"sendNotification"]);
 
+Route::get("/admin/student",[App\Http\Controllers\Admin\StudentController::class, "listAll"]);
+Route::get("/admin/student/create",[App\Http\Controllers\Admin\StudentController::class, "createStudent"]);
+Route::post("/admin/student/create",[App\Http\Controllers\Admin\StudentController::class, "store"]);
+
 
 
